@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59F20087BBC5F1381FF8BE37 /* Pods_Two_Tyred.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E956D4AB129A2F5493ADA0 /* Pods_Two_Tyred.framework */; };
+		7000EF7221931492005D92D9 /* Fernando_noronha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7000EF7121931492005D92D9 /* Fernando_noronha.jpg */; };
+		70036AB82214A668009C8F94 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70036AB72214A668009C8F94 /* CategoriesViewController.swift */; };
+		70036ABA2214ACBC009C8F94 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70036AB92214ACBC009C8F94 /* CollectionViewCell.swift */; };
+		7009E6C3220A0DA100C442AC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7009E6C2220A0DA100C442AC /* SearchViewController.swift */; };
+		700A3E87219760B2008D3484 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 700A3E86219760B2008D3484 /* GoogleService-Info.plist */; };
+		70123857219A2ECE000F304F /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 70123856219A2ECE000F304F /* bike.png */; };
+		701F3651219A42CB002C676E /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 701F3650219A42CB002C676E /* AppIcon.appiconset */; };
+		7040C61F219769A100394B35 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7040C61E219769A100394B35 /* ARViewController.swift */; };
+		704B228E219A157A00EA7682 /* TwoTyred.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 704B228D219A157A00EA7682 /* TwoTyred.mp4 */; };
+		708691D52201F914007AF114 /* resized_bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 708691D42201F914007AF114 /* resized_bike.png */; };
+		70A2E9D7219383DF00D64169 /* qrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */; };
+		70D31C40219221E200E0DC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D31C3F219221E200E0DC69 /* AppDelegate.swift */; };
+		70D31C42219221E200E0DC69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D31C41219221E200E0DC69 /* ViewController.swift */; };
+		70D31C45219221E200E0DC69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D31C43219221E200E0DC69 /* Main.storyboard */; };
+		70D31C47219221E300E0DC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D31C46219221E300E0DC69 /* Assets.xcassets */; };
+		70D31C4A219221E300E0DC69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D31C48219221E300E0DC69 /* LaunchScreen.storyboard */; };
+		70D31C5A219234AF00E0DC69 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D31C59219234AF00E0DC69 /* LoginViewController.swift */; };
+		70DF52B22194C5B3001B4848 /* WhereToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF52B12194C5B3001B4848 /* WhereToViewController.swift */; };
+		70DF52B42194C696001B4848 /* MapPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF52B32194C696001B4848 /* MapPageViewController.swift */; };
+		70DF52B82194D67F001B4848 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF52B72194D67E001B4848 /* square.png */; };
+		70DF52BA2194D68E001B4848 /* Apple-Music-Black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */; };
+		70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E52CAD222484B30061BB25 /* MapsViewController.swift */; };
+		70EFCFC92194DAB200EB3F95 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */; };
+		70F977BA21923F7F00C1AA03 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F977B921923F7F00C1AA03 /* RegisterViewController.swift */; };
+		70F977BE2192659A00C1AA03 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F977BD2192659A00C1AA03 /* MainPageViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3EEAF5B3BAE67EE43F1FF311 /* Pods-Two Tyred.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Two Tyred.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Two Tyred/Pods-Two Tyred.debug.xcconfig"; sourceTree = "<group>"; };
+		7000EF7121931492005D92D9 /* Fernando_noronha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fernando_noronha.jpg; sourceTree = "<group>"; };
+		70036AB72214A668009C8F94 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		70036AB92214ACBC009C8F94 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		7009E6C2220A0DA100C442AC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		700A3E86219760B2008D3484 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70123856219A2ECE000F304F /* bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike.png; sourceTree = "<group>"; };
+		701F3650219A42CB002C676E /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		7040C61E219769A100394B35 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		704B228D219A157A00EA7682 /* TwoTyred.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TwoTyred.mp4; sourceTree = "<group>"; };
+		708691D42201F914007AF114 /* resized_bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resized_bike.png; sourceTree = "<group>"; };
+		70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qrCodeViewController.swift; sourceTree = "<group>"; };
+		70D31C3C219221E200E0DC69 /* Two Tyred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Two Tyred.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70D31C3F219221E200E0DC69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70D31C41219221E200E0DC69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		70D31C44219221E200E0DC69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70D31C46219221E300E0DC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70D31C49219221E300E0DC69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70D31C4B219221E300E0DC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70D31C59219234AF00E0DC69 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		70DF52B12194C5B3001B4848 /* WhereToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToViewController.swift; sourceTree = "<group>"; };
+		70DF52B32194C696001B4848 /* MapPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPageViewController.swift; sourceTree = "<group>"; };
+		70DF52B72194D67E001B4848 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
+		70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Apple-Music-Black.jpg"; sourceTree = "<group>"; };
+		70E52CAD222484B30061BB25 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		70F977B921923F7F00C1AA03 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		70F977BD2192659A00C1AA03 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		D12CE59A860F95C6C79DCDE1 /* Pods-Two Tyred.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Two Tyred.release.xcconfig"; path = "Pods/Target Support Files/Pods-Two Tyred/Pods-Two Tyred.release.xcconfig"; sourceTree = "<group>"; };
+		E3E956D4AB129A2F5493ADA0 /* Pods_Two_Tyred.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Two_Tyred.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70D31C39219221E200E0DC69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59F20087BBC5F1381FF8BE37 /* Pods_Two_Tyred.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44C13ABA7A959F7B35E8B743 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3EEAF5B3BAE67EE43F1FF311 /* Pods-Two Tyred.debug.xcconfig */,
+				D12CE59A860F95C6C79DCDE1 /* Pods-Two Tyred.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		62967D9D46FC5824607D3923 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3E956D4AB129A2F5493ADA0 /* Pods_Two_Tyred.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70D31C33219221E200E0DC69 = {
+			isa = PBXGroup;
+			children = (
+				704B228D219A157A00EA7682 /* TwoTyred.mp4 */,
+				70D31C3E219221E200E0DC69 /* Two Tyred */,
+				70D31C3D219221E200E0DC69 /* Products */,
+				44C13ABA7A959F7B35E8B743 /* Pods */,
+				62967D9D46FC5824607D3923 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		70D31C3D219221E200E0DC69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70D31C3C219221E200E0DC69 /* Two Tyred.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70D31C3E219221E200E0DC69 /* Two Tyred */ = {
+			isa = PBXGroup;
+			children = (
+				70D31C532192233700E0DC69 /* Controller */,
+				70D31C522192232500E0DC69 /* View */,
+				70D31C512192231800E0DC69 /* Model */,
+				70D31C3F219221E200E0DC69 /* AppDelegate.swift */,
+				70D31C41219221E200E0DC69 /* ViewController.swift */,
+				70D31C46219221E300E0DC69 /* Assets.xcassets */,
+				701F3650219A42CB002C676E /* AppIcon.appiconset */,
+				70D31C4B219221E300E0DC69 /* Info.plist */,
+				700A3E86219760B2008D3484 /* GoogleService-Info.plist */,
+			);
+			path = "Two Tyred";
+			sourceTree = "<group>";
+		};
+		70D31C512192231800E0DC69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70D31C522192232500E0DC69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70036AB92214ACBC009C8F94 /* CollectionViewCell.swift */,
+				70D31C43219221E200E0DC69 /* Main.storyboard */,
+				70D31C48219221E300E0DC69 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70D31C532192233700E0DC69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70D31C59219234AF00E0DC69 /* LoginViewController.swift */,
+				70F977B921923F7F00C1AA03 /* RegisterViewController.swift */,
+				70F977BD2192659A00C1AA03 /* MainPageViewController.swift */,
+				70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */,
+				70DF52B12194C5B3001B4848 /* WhereToViewController.swift */,
+				70DF52B32194C696001B4848 /* MapPageViewController.swift */,
+				70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */,
+				7040C61E219769A100394B35 /* ARViewController.swift */,
+				7009E6C2220A0DA100C442AC /* SearchViewController.swift */,
+				70036AB72214A668009C8F94 /* CategoriesViewController.swift */,
+				70E52CAD222484B30061BB25 /* MapsViewController.swift */,
+				70D31C542192265500E0DC69 /* images */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70D31C542192265500E0DC69 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				708691D42201F914007AF114 /* resized_bike.png */,
+				70123856219A2ECE000F304F /* bike.png */,
+				70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */,
+				70DF52B72194D67E001B4848 /* square.png */,
+				7000EF7121931492005D92D9 /* Fernando_noronha.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70D31C3B219221E200E0DC69 /* Two Tyred */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70D31C4E219221E300E0DC69 /* Build configuration list for PBXNativeTarget "Two Tyred" */;
+			buildPhases = (
+				E601D37CC67EA7C23AF4E48E /* [CP] Check Pods Manifest.lock */,
+				70D31C38219221E200E0DC69 /* Sources */,
+				70D31C39219221E200E0DC69 /* Frameworks */,
+				70D31C3A219221E200E0DC69 /* Resources */,
+				D0970A8335979C403528A6BC /* [CP] Embed Pods Frameworks */,
+				8CB0FCB2B2B707B80EEA83E2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Two Tyred";
+			productName = "Two Tyred";
+			productReference = 70D31C3C219221E200E0DC69 /* Two Tyred.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70D31C34219221E200E0DC69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Michael Christie";
+				TargetAttributes = {
+					70D31C3B219221E200E0DC69 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 70D31C37219221E200E0DC69 /* Build configuration list for PBXProject "Two Tyred" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70D31C33219221E200E0DC69;
+			productRefGroup = 70D31C3D219221E200E0DC69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70D31C3B219221E200E0DC69 /* Two Tyred */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70D31C3A219221E200E0DC69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7000EF7221931492005D92D9 /* Fernando_noronha.jpg in Resources */,
+				700A3E87219760B2008D3484 /* GoogleService-Info.plist in Resources */,
+				70123857219A2ECE000F304F /* bike.png in Resources */,
+				70D31C4A219221E300E0DC69 /* LaunchScreen.storyboard in Resources */,
+				704B228E219A157A00EA7682 /* TwoTyred.mp4 in Resources */,
+				70D31C47219221E300E0DC69 /* Assets.xcassets in Resources */,
+				70DF52BA2194D68E001B4848 /* Apple-Music-Black.jpg in Resources */,
+				70DF52B82194D67F001B4848 /* square.png in Resources */,
+				701F3651219A42CB002C676E /* AppIcon.appiconset in Resources */,
+				708691D52201F914007AF114 /* resized_bike.png in Resources */,
+				70D31C45219221E200E0DC69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CB0FCB2B2B707B80EEA83E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Two Tyred/Pods-Two Tyred-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Two Tyred/Pods-Two Tyred-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0970A8335979C403528A6BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Two Tyred/Pods-Two Tyred-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/MapboxCoreNavigation/MapboxCoreNavigation.framework",
+				"${BUILT_PRODUCTS_DIR}/MapboxDirections.swift/MapboxDirections.framework",
+				"${BUILT_PRODUCTS_DIR}/MapboxMobileEvents/MapboxMobileEvents.framework",
+				"${BUILT_PRODUCTS_DIR}/MapboxNavigation/MapboxNavigation.framework",
+				"${PODS_ROOT}/MapboxNavigationNative/MapboxNavigationNative.framework",
+				"${PODS_ROOT}/MapboxNavigationNative/MapboxNavigationNative.framework.dSYM",
+				"${BUILT_PRODUCTS_DIR}/MapboxSpeech/MapboxSpeech.framework",
+				"${BUILT_PRODUCTS_DIR}/Polyline/Polyline.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Solar/Solar.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Turf/Turf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxCoreNavigation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxDirections.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxMobileEvents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxNavigation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxNavigationNative.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/MapboxNavigationNative.framework.dSYM",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxSpeech.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Polyline.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Solar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Turf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Two Tyred/Pods-Two Tyred-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E601D37CC67EA7C23AF4E48E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Two Tyred-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70D31C38219221E200E0DC69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70DF52B42194C696001B4848 /* MapPageViewController.swift in Sources */,
+				7009E6C3220A0DA100C442AC /* SearchViewController.swift in Sources */,
+				70036AB82214A668009C8F94 /* CategoriesViewController.swift in Sources */,
+				70A2E9D7219383DF00D64169 /* qrCodeViewController.swift in Sources */,
+				70DF52B22194C5B3001B4848 /* WhereToViewController.swift in Sources */,
+				70F977BE2192659A00C1AA03 /* MainPageViewController.swift in Sources */,
+				70D31C5A219234AF00E0DC69 /* LoginViewController.swift in Sources */,
+				70D31C42219221E200E0DC69 /* ViewController.swift in Sources */,
+				70036ABA2214ACBC009C8F94 /* CollectionViewCell.swift in Sources */,
+				70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */,
+				70EFCFC92194DAB200EB3F95 /* MusicViewController.swift in Sources */,
+				70D31C40219221E200E0DC69 /* AppDelegate.swift in Sources */,
+				70F977BA21923F7F00C1AA03 /* RegisterViewController.swift in Sources */,
+				7040C61F219769A100394B35 /* ARViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		70D31C43219221E200E0DC69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70D31C44219221E200E0DC69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		70D31C48219221E300E0DC69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70D31C49219221E300E0DC69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70D31C4C219221E300E0DC69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70D31C4D219221E300E0DC69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70D31C4F219221E300E0DC69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EEAF5B3BAE67EE43F1FF311 /* Pods-Two Tyred.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SWH8KK7463;
+				INFOPLIST_FILE = "Two Tyred/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michaelchristie.Two-Tyred";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		70D31C50219221E300E0DC69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D12CE59A860F95C6C79DCDE1 /* Pods-Two Tyred.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SWH8KK7463;
+				INFOPLIST_FILE = "Two Tyred/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.michaelchristie.Two-Tyred";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70D31C37219221E200E0DC69 /* Build configuration list for PBXProject "Two Tyred" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70D31C4C219221E300E0DC69 /* Debug */,
+				70D31C4D219221E300E0DC69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70D31C4E219221E300E0DC69 /* Build configuration list for PBXNativeTarget "Two Tyred" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70D31C4F219221E300E0DC69 /* Debug */,
+				70D31C50219221E300E0DC69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70D31C34219221E200E0DC69 /* Project object */;
+}
