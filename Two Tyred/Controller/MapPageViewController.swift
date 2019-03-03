@@ -96,10 +96,6 @@ class MapPageViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         //let distanceInMeters = sourceCoordinates.distance(from: destCoordinated) // result is in meters
         
         
-       
-        
-        
-        
         print()
         print("Distance: ")
         print()
@@ -162,7 +158,7 @@ class MapPageViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        //guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         //print("locations = \(locValue.latitude) \(locValue.longitude)")
     }
     

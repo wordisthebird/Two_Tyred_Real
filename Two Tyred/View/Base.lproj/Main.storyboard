@@ -759,16 +759,28 @@
                     <view key="view" contentMode="scaleToFill" id="bVz-i4-b8T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-cL-gcS">
+                                <rect key="frame" x="152" y="523" width="70" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Apple-Music-Black.jpg"/>
+                                <connections>
+                                    <action selector="AppleMusicClicked:" destination="4IF-eS-gJT" eventType="touchUpInside" id="4us-Fv-6FD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FsT-6n-tUw"/>
                     </view>
                     <connections>
+                        <outlet property="MusicButton" destination="PCm-cL-gcS" id="kPz-oh-hWy"/>
                         <segue destination="OoY-0f-Igb" kind="show" identifier="goToEnd" id="905-V4-nKj"/>
+                        <segue destination="OdX-rq-usZ" kind="show" identifier="GoToMusic" id="py3-nO-wx4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgO-4E-Ya3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7830" y="1661"/>
+            <point key="canvasLocation" x="7817" y="913"/>
         </scene>
     </scenes>
     <resources>
@@ -777,6 +789,7 @@
         <image name="square.png" width="2000" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="py3-nO-wx4"/>
         <segue reference="905-V4-nKj"/>
         <segue reference="N4c-qR-tWj"/>
     </inferredMetricsTieBreakers>

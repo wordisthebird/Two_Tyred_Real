@@ -15,6 +15,9 @@ import MapboxCoreNavigation
 
 class MapsViewController: UIViewController, MGLMapViewDelegate{
     
+   
+    @IBOutlet weak var AppleMusic: UIButton!
+    
     var longCoord1: [Double] = []
     var latCoord1: [Double] = []
     var names1: [String] = []
@@ -22,6 +25,11 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
     var MapView : NavigationMapView!
     var TestButton : UIButton!
     var TestButton2 : UIButton!
+    
+    
+    @IBOutlet weak var MusicButton: UIButton!
+    
+    
     var directionsRoute: Route?
     
     var one = CLLocationCoordinate2D()
@@ -31,6 +39,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         // Do any additional setup after loading the view, typically from a nib.
         MapView = NavigationMapView(frame: view.bounds)
@@ -43,6 +53,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         MapView.setUserTrackingMode(.follow, animated: true)
         
         view.addSubview(MapView)
+        
+        view.bringSubviewToFront(MusicButton)
         
         one.longitude = longCoord1[0]
         one.latitude = latCoord1[0]
@@ -213,4 +225,17 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         let navigationVC = NavigationViewController(for: directionsRoute!)
         present(navigationVC, animated: true, completion: nil)
     }
+    
+   
+    
+    @IBAction func AppleMusicClicked(_ sender: Any) {
+        
+        print("Boom")
+        
+        self.performSegue(withIdentifier: "GoToMusic", sender: self)
+    }
+    
+    
+   
+    
 }
