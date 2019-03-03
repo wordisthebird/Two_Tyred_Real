@@ -120,10 +120,10 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! MapPageViewController
+        let vc = segue.destination as! SearchMapViewController
         
-        vc.longitude = tlat
-        vc.lattitude = tlong
+        vc.latitudez = tlat
+        vc.longitude = tlong
     }
     
     override func didReceiveMemoryWarning() {

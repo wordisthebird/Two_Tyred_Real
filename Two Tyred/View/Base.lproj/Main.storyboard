@@ -421,6 +421,38 @@
             </objects>
             <point key="canvasLocation" x="4474" y="125"/>
         </scene>
+        <!--Search Map View Controller-->
+        <scene sceneID="fzD-Dg-bBf">
+            <objects>
+                <viewController id="UEN-0E-BD8" customClass="SearchMapViewController" customModule="Two_Tyred" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9wo-Aj-LGF"/>
+                        <viewControllerLayoutGuide type="bottom" id="hIq-RC-GP1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h1v-Wq-54h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySe-ds-D4a">
+                                <rect key="frame" x="150" y="527" width="74" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Apple-Music-Black.jpg"/>
+                                <connections>
+                                    <action selector="appleMusicClicked:" destination="UEN-0E-BD8" eventType="touchUpInside" id="BXA-DL-56O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="musicButton" destination="ySe-ds-D4a" id="sWt-jl-AgE"/>
+                        <segue destination="OdX-rq-usZ" kind="show" identifier="goToMusic" id="YZi-yI-hgt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QUc-au-uJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5256.8000000000002" y="124.58770614692655"/>
+        </scene>
         <!--Ride Finished View Controller-->
         <scene sceneID="bcV-DG-FA5">
             <objects>
@@ -482,9 +514,6 @@
                                 <state key="normal" title="End Ride">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="uXL-BW-IY5" kind="presentation" id="AyN-rq-q7J"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPa-jF-q7p">
                                 <rect key="frame" x="30" y="548" width="90" height="55"/>
@@ -492,7 +521,6 @@
                                 <state key="normal" title="Button" image="Apple-Music-Black.jpg"/>
                                 <connections>
                                     <action selector="spotifyClicked:" destination="1JO-hU-ne5" eventType="touchUpInside" id="54A-ax-Wzj"/>
-                                    <segue destination="OdX-rq-usZ" kind="show" id="emH-oT-nCh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -503,12 +531,11 @@
                         <outlet property="AppleMusicButton" destination="uPa-jF-q7p" id="y32-A1-g5k"/>
                         <outlet property="EndRideButton" destination="1c4-5o-ShO" id="v2E-Qq-wqI"/>
                         <outlet property="MapView" destination="0Yv-jI-kjh" id="lMp-HE-2jV"/>
-                        <segue destination="A84-ia-b50" kind="show" identifier="GoToAR" id="4f2-aI-9K6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHR-Vh-Djf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5257" y="125"/>
+            <point key="canvasLocation" x="3586" y="-909"/>
         </scene>
         <!--Categories View Controller-->
         <scene sceneID="f8D-ep-Hu0">
@@ -610,7 +637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AE9-fV-cMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5257" y="913"/>
+            <point key="canvasLocation" x="5578" y="863"/>
         </scene>
         <!--Music View Controller-->
         <scene sceneID="thQ-b9-sQN">
@@ -745,7 +772,7 @@
                     <connections>
                         <outlet property="tblPlaces" destination="Vuo-IZ-7aA" id="I4l-aC-Srl"/>
                         <outlet property="txtSearch" destination="ufM-QT-Tgv" id="h94-ea-JpQ"/>
-                        <segue destination="1JO-hU-ne5" kind="show" identifier="goToBoom" id="wk4-kz-e7U"/>
+                        <segue destination="UEN-0E-BD8" kind="show" identifier="goToBoom" id="N44-Ux-Mc6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6K-Pe-b74" sceneMemberID="firstResponder"/>
@@ -789,7 +816,7 @@
         <image name="square.png" width="2000" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="py3-nO-wx4"/>
+        <segue reference="YZi-yI-hgt"/>
         <segue reference="905-V4-nKj"/>
         <segue reference="N4c-qR-tWj"/>
     </inferredMetricsTieBreakers>

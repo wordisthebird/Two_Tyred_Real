@@ -10,6 +10,7 @@
 		7000EF7221931492005D92D9 /* Fernando_noronha.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7000EF7121931492005D92D9 /* Fernando_noronha.jpg */; };
 		70036AB82214A668009C8F94 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70036AB72214A668009C8F94 /* CategoriesViewController.swift */; };
 		70036ABA2214ACBC009C8F94 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70036AB92214ACBC009C8F94 /* CollectionViewCell.swift */; };
+		7008C103222C4CE200BD8A3D /* SearchMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7008C102222C4CE200BD8A3D /* SearchMapViewController.swift */; };
 		7009E6C3220A0DA100C442AC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7009E6C2220A0DA100C442AC /* SearchViewController.swift */; };
 		700A3E87219760B2008D3484 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 700A3E86219760B2008D3484 /* GoogleService-Info.plist */; };
 		70123857219A2ECE000F304F /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 70123856219A2ECE000F304F /* bike.png */; };
@@ -41,6 +42,7 @@
 		7000EF7121931492005D92D9 /* Fernando_noronha.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Fernando_noronha.jpg; sourceTree = "<group>"; };
 		70036AB72214A668009C8F94 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		70036AB92214ACBC009C8F94 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		7008C102222C4CE200BD8A3D /* SearchMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapViewController.swift; sourceTree = "<group>"; };
 		7009E6C2220A0DA100C442AC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		700A3E86219760B2008D3484 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70123856219A2ECE000F304F /* bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike.png; sourceTree = "<group>"; };
@@ -86,7 +88,6 @@
 				1F53FB3C55B5942C743A519E /* Pods-Two Tyred.debug.xcconfig */,
 				08C0A16AE8316D56A16668D5 /* Pods-Two Tyred.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +157,7 @@
 				7009E6C2220A0DA100C442AC /* SearchViewController.swift */,
 				70036AB72214A668009C8F94 /* CategoriesViewController.swift */,
 				70E52CAD222484B30061BB25 /* MapsViewController.swift */,
+				7008C102222C4CE200BD8A3D /* SearchMapViewController.swift */,
 				70D31C542192265500E0DC69 /* images */,
 			);
 			path = Controller;
@@ -390,6 +392,7 @@
 				70EFCFC92194DAB200EB3F95 /* MusicViewController.swift in Sources */,
 				70D31C40219221E200E0DC69 /* AppDelegate.swift in Sources */,
 				70F977BA21923F7F00C1AA03 /* RegisterViewController.swift in Sources */,
+				7008C103222C4CE200BD8A3D /* SearchMapViewController.swift in Sources */,
 				7040C61F219769A100394B35 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

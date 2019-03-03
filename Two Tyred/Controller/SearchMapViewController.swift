@@ -1,11 +1,10 @@
 //
-//  MapsViewController.swift
+//  SearchMapViewController.swift
 //  Two Tyred
 //
-//  Created by Michael Christie on 25/02/2019.
+//  Created by Michael Christie on 03/03/2019.
 //  Copyright © 2019 Michael Christie. All rights reserved.
 //
-
 
 import UIKit
 import Mapbox
@@ -13,22 +12,21 @@ import MapboxNavigation
 import MapboxDirections
 import MapboxCoreNavigation
 
-class MapsViewController: UIViewController, MGLMapViewDelegate{
+class SearchMapViewController: UIViewController, MGLMapViewDelegate {
     
-   
-    @IBOutlet weak var AppleMusic: UIButton!
+    
+    @IBOutlet weak var musicButton: UIButton!
     
     var longCoord1: [Double] = []
     var latCoord1: [Double] = []
     var names1: [String] = []
     
+    var latitudez: Double = 0
+    var longitude: Double = 0
+    
     var MapView : NavigationMapView!
     var TestButton : UIButton!
     var TestButton2 : UIButton!
-    
-    
-    @IBOutlet weak var MusicButton: UIButton!
-    
     
     var directionsRoute: Route?
     
@@ -40,6 +38,9 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+
         // Do any additional setup after loading the view, typically from a nib.
         MapView = NavigationMapView(frame: view.bounds)
         MapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -52,19 +53,10 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         
         view.addSubview(MapView)
         
-        view.bringSubviewToFront(MusicButton)
+        one.longitude = longitude
+        one.latitude = latitudez
         
-        one.longitude = longCoord1[0]
-        one.latitude = latCoord1[0]
-        
-        two.longitude = longCoord1[1]
-        two.latitude = latCoord1[1]
-        
-        three.longitude = longCoord1[2]
-        three.latitude = latCoord1[2]
-        
-        four.longitude = longCoord1[3]
-        four.latitude = latCoord1[3]
+        view.bringSubviewToFront(musicButton)
         
         addButton()
     }
@@ -105,32 +97,9 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         
         MapView.setUserTrackingMode(.none, animated: true)
         
-        let annotationOne = MGLPointAnnotation()
-        annotationOne.coordinate = one
-        let newString1 = names1[0].replacingOccurrences(of: "+", with: " ", options: .literal, range: nil)
-        annotationOne.title = newString1
+      
         
-        let annotationTwo = MGLPointAnnotation()
-        annotationTwo.coordinate = two
-        let newString2 = names1[1].replacingOccurrences(of: "+", with: " ", options: .literal, range: nil)
-        annotationTwo.title = newString2
-        
-        let annotationThree = MGLPointAnnotation()
-        annotationThree.coordinate = three
-        let newString3 = names1[2].replacingOccurrences(of: "+", with: " ", options: .literal, range: nil)
-        annotationThree.title = newString3
-        
-        let annotationFour = MGLPointAnnotation()
-        annotationFour.coordinate = four
-        let newString4 = names1[3].replacingOccurrences(of: "+", with: " ", options: .literal, range: nil)
-        annotationFour.title = newString4
-        
-        MapView.addAnnotation(annotationOne)
-        MapView.addAnnotation(annotationTwo)
-        MapView.addAnnotation(annotationThree)
-        MapView.addAnnotation(annotationFour)
-        
-        calculateRoute(from: (MapView.userLocation!.coordinate), to: one, to: two, to: three, to: four) { (route, error) in
+        calculateRoute(from: (MapView.userLocation!.coordinate), to: one) { (route, error) in
             if error != nil{
                 print("boom")
             }
@@ -146,7 +115,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
             case .default:
-                  self.performSegue(withIdentifier: "goToEnd", sender: self)
+                self.performSegue(withIdentifier: "goToEnd", sender: self)
                 
             case .cancel:
                 print("cancel")
@@ -158,19 +127,16 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
             }}))
         self.present(alert, animated: true, completion: nil)
         
-      
+        
     }
     
     
-    func calculateRoute(from originCorr: CLLocationCoordinate2D, to first: CLLocationCoordinate2D, to second: CLLocationCoordinate2D, to third: CLLocationCoordinate2D, to fourth: CLLocationCoordinate2D, completion: (Route?, Error?) -> Void) {
+    func calculateRoute(from originCorr: CLLocationCoordinate2D, to first: CLLocationCoordinate2D, completion: (Route?, Error?) -> Void) {
         
         let One1 = Waypoint(coordinate: originCorr, coordinateAccuracy: -1, name: "Current Location")
         let Two2 = Waypoint(coordinate: first, coordinateAccuracy: -1, name: "Middle")
-        let Three3 = Waypoint(coordinate: second, coordinateAccuracy: -1, name: "Destination")
-        let Four4 = Waypoint(coordinate: third, coordinateAccuracy: -1, name: "Destination")
-        let Five5 = Waypoint(coordinate: fourth, coordinateAccuracy: -1, name: "Destination")
-        
-        let options = NavigationRouteOptions(waypoints: [One1,Two2,Three3,Four4,Five5], profileIdentifier: .automobile)
+       
+        let options = NavigationRouteOptions(waypoints: [One1,Two2], profileIdentifier: .automobile)
         
         _ = Directions.shared.calculate(options, completionHandler: {(waypoints, routes, error) in
             
@@ -179,7 +145,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
             self.Draw(route: self.directionsRoute!)
             
             //rectangle bounds
-            let coordinateBounds = MGLCoordinateBounds(sw: third, ne: originCorr)
+            let coordinateBounds = MGLCoordinateBounds(sw: first, ne: originCorr)
             
             let insets = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
             
@@ -224,16 +190,15 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         present(navigationVC, animated: true, completion: nil)
     }
     
-   
     
-    @IBAction func AppleMusicClicked(_ sender: Any) {
+    
+   
+    @IBAction func appleMusicClicked(_ sender: Any) {
         
-        print("Boom")
-        
-        self.performSegue(withIdentifier: "GoToMusic", sender: self)
+        self.performSegue(withIdentifier: "goToMusic", sender: self)
     }
     
     
-   
+    
     
 }
