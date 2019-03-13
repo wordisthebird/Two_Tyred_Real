@@ -28,6 +28,10 @@ class CategoriesViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        names.removeAll()
+        longCoord.removeAll()
+        latCoord.removeAll()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -255,6 +259,8 @@ class CategoriesViewController: UIViewController, UICollectionViewDataSource, UI
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! MapsViewController
+        
+       
         
         vc.longCoord1 = self.longCoord
         vc.latCoord1 = self.latCoord

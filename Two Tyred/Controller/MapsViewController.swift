@@ -12,10 +12,13 @@ import Mapbox
 import MapboxNavigation
 import MapboxDirections
 import MapboxCoreNavigation
+import UserNotifications
+import CoreLocation
 
-class MapsViewController: UIViewController, MGLMapViewDelegate{
+class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDelegate{
     
-   
+    let locationManager:CLLocationManager = CLLocationManager()
+    
     @IBOutlet weak var AppleMusic: UIButton!
     
     var longCoord1: [Double] = []
@@ -65,6 +68,21 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         
         four.longitude = longCoord1[3]
         four.latitude = latCoord1[3]
+        
+        
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        
+        
+        //explanation
+        //https://stackoverflow.com/questions/23866097/ios-geofence-clcircularregion-monitoring-locationmanagerdidexitregion-does-not
+        
+        let geofenceRegionCenter = CLLocationCoordinate2DMake(54.2725555, -8.4716481);
+        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 15, identifier: "PlayaGrande");
+        geofenceRegion.notifyOnExit = true;
+        geofenceRegion.notifyOnEntry = true;
+        self.locationManager.startMonitoring(for: geofenceRegion)
         
         addButton()
     }
@@ -146,7 +164,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
             case .default:
-                  self.performSegue(withIdentifier: "goToEnd", sender: self)
+                self.performSegue(withIdentifier: "goToEnd", sender: self)
                 
             case .cancel:
                 print("cancel")
@@ -158,7 +176,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
             }}))
         self.present(alert, animated: true, completion: nil)
         
-      
+        
     }
     
     
@@ -224,7 +242,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
         present(navigationVC, animated: true, completion: nil)
     }
     
-   
+    
     
     @IBAction func AppleMusicClicked(_ sender: Any) {
         
@@ -234,6 +252,44 @@ class MapsViewController: UIViewController, MGLMapViewDelegate{
     }
     
     
-   
+    //entered
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("Entered")
+        
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        
+        content.title = "Scan AR image"
+        content.body = "Find and scan image to learn more about what you have just passed!"
+        content.sound = UNNotificationSound.default
+        
+        content.threadIdentifier = "local-notifications temp"
+        
+        let date  = Date(timeIntervalSinceNow: 1)
+        
+        let datecomponents = Calendar.current.dateComponents([.year,.month,.day,.hour,.minute,.second], from: date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: datecomponents, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "content", content: content, trigger: trigger)
+        
+        center.add(request) { (error) in
+            if error != nil{
+                print("ERROR: ",error as Any)
+            }        }
+    }
+    
+    //exited
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("Exited")
+        let alert = UIAlertController(title: "Exited?", message: "Exited.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
     
 }

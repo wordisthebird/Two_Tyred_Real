@@ -9,9 +9,10 @@
 import UIKit
 import Firebase
 import GoogleMaps
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     var window: UIWindow?
     
@@ -30,11 +31,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //display lauch screen for longer
          Thread.sleep(forTimeInterval: 3.0)
+        
+        let center = UNUserNotificationCenter.current()
+        
+        let options: UNAuthorizationOptions = [.sound, .alert]
+        
+        center.requestAuthorization(options: options) { (granted, error) in
+            if error  != nil{
+                print("ERROR: ",error!)
+            }
+        }
+        
+        center.delegate = self
+        
+        
         return true
     }
     
     
-    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        completionHandler([.alert,.badge,.sound])
+    }
     
     
     func applicationWillResignActive(_ application: UIApplication) {

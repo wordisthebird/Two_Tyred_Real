@@ -23,9 +23,9 @@ class WhereToViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let vc =  segue.destination as? MapPageViewController{
+       /* if let vc =  segue.destination as? MapPageViewController{
             vc.destinationName = EnteredTextField.text
-        }
+        }*/
         
     }
     

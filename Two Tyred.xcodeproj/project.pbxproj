@@ -17,6 +17,7 @@
 		701F3651219A42CB002C676E /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 701F3650219A42CB002C676E /* AppIcon.appiconset */; };
 		7040C61F219769A100394B35 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7040C61E219769A100394B35 /* ARViewController.swift */; };
 		704B228E219A157A00EA7682 /* TwoTyred.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 704B228D219A157A00EA7682 /* TwoTyred.mp4 */; };
+		70756B9D22396007008D20A6 /* RideFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70756B9C22396007008D20A6 /* RideFinishedViewController.swift */; };
 		708691D52201F914007AF114 /* resized_bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 708691D42201F914007AF114 /* resized_bike.png */; };
 		70A2E9D7219383DF00D64169 /* qrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */; };
 		70D31C40219221E200E0DC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D31C3F219221E200E0DC69 /* AppDelegate.swift */; };
@@ -26,7 +27,6 @@
 		70D31C4A219221E300E0DC69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D31C48219221E300E0DC69 /* LaunchScreen.storyboard */; };
 		70D31C5A219234AF00E0DC69 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D31C59219234AF00E0DC69 /* LoginViewController.swift */; };
 		70DF52B22194C5B3001B4848 /* WhereToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF52B12194C5B3001B4848 /* WhereToViewController.swift */; };
-		70DF52B42194C696001B4848 /* MapPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF52B32194C696001B4848 /* MapPageViewController.swift */; };
 		70DF52B82194D67F001B4848 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF52B72194D67E001B4848 /* square.png */; };
 		70DF52BA2194D68E001B4848 /* Apple-Music-Black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */; };
 		70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E52CAD222484B30061BB25 /* MapsViewController.swift */; };
@@ -49,6 +49,7 @@
 		701F3650219A42CB002C676E /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		7040C61E219769A100394B35 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		704B228D219A157A00EA7682 /* TwoTyred.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TwoTyred.mp4; sourceTree = "<group>"; };
+		70756B9C22396007008D20A6 /* RideFinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideFinishedViewController.swift; sourceTree = "<group>"; };
 		708691D42201F914007AF114 /* resized_bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resized_bike.png; sourceTree = "<group>"; };
 		70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qrCodeViewController.swift; sourceTree = "<group>"; };
 		70D31C3C219221E200E0DC69 /* Two Tyred.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Two Tyred.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +61,6 @@
 		70D31C4B219221E300E0DC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D31C59219234AF00E0DC69 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		70DF52B12194C5B3001B4848 /* WhereToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToViewController.swift; sourceTree = "<group>"; };
-		70DF52B32194C696001B4848 /* MapPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPageViewController.swift; sourceTree = "<group>"; };
 		70DF52B72194D67E001B4848 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Apple-Music-Black.jpg"; sourceTree = "<group>"; };
 		70E52CAD222484B30061BB25 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
@@ -151,13 +151,13 @@
 				70F977BD2192659A00C1AA03 /* MainPageViewController.swift */,
 				70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */,
 				70DF52B12194C5B3001B4848 /* WhereToViewController.swift */,
-				70DF52B32194C696001B4848 /* MapPageViewController.swift */,
 				70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */,
 				7040C61E219769A100394B35 /* ARViewController.swift */,
 				7009E6C2220A0DA100C442AC /* SearchViewController.swift */,
 				70036AB72214A668009C8F94 /* CategoriesViewController.swift */,
 				70E52CAD222484B30061BB25 /* MapsViewController.swift */,
 				7008C102222C4CE200BD8A3D /* SearchMapViewController.swift */,
+				70756B9C22396007008D20A6 /* RideFinishedViewController.swift */,
 				70D31C542192265500E0DC69 /* images */,
 			);
 			path = Controller;
@@ -379,7 +379,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70DF52B42194C696001B4848 /* MapPageViewController.swift in Sources */,
 				7009E6C3220A0DA100C442AC /* SearchViewController.swift in Sources */,
 				70036AB82214A668009C8F94 /* CategoriesViewController.swift in Sources */,
 				70A2E9D7219383DF00D64169 /* qrCodeViewController.swift in Sources */,
@@ -387,6 +386,7 @@
 				70F977BE2192659A00C1AA03 /* MainPageViewController.swift in Sources */,
 				70D31C5A219234AF00E0DC69 /* LoginViewController.swift in Sources */,
 				70D31C42219221E200E0DC69 /* ViewController.swift in Sources */,
+				70756B9D22396007008D20A6 /* RideFinishedViewController.swift in Sources */,
 				70036ABA2214ACBC009C8F94 /* CollectionViewCell.swift in Sources */,
 				70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */,
 				70EFCFC92194DAB200EB3F95 /* MusicViewController.swift in Sources */,
