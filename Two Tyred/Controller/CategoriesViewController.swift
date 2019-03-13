@@ -7,12 +7,16 @@
 //
 
 import UIKit
-import UIKit
 import Alamofire
 import SwiftyJSON
 import CoreLocation
 
 class CategoriesViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    
+    @IBOutlet weak var RouteButton: UIButton!
+    
+    @IBOutlet weak var collectionsView: UICollectionView!
     
     var longCoord: [Double] = []
     var latCoord: [Double] = []
@@ -20,60 +24,97 @@ class CategoriesViewController: UIViewController, UICollectionViewDataSource, UI
     
     var search1:String = ""
     
-    let locationName = ["Churches", "Bars and Pubs","Museums","Sports facilities"]
-    
-    let locationImage = [UIImage(named: "church"),UIImage(named: "pints"),UIImage(named: "museum"), UIImage(named: "sports")]
-    
-    let locationDescription = ["Routes around the local beautiful churches.","Routes for the locality's best pubs and restauraunts","Routes to the most interesting museums and gallaries near you", "Routes to see the localities sports facilities"]
+    var counter: Int = 0
+    var locations: [String] = []
+    let Burgers = ["Churches","Pubs","Culture","Sports"]
+    let burgerImages = [UIImage(named: "church"),UIImage(named: "pints"),UIImage(named: "museum"), UIImage(named: "sports")]
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        names.removeAll()
-        longCoord.removeAll()
-        latCoord.removeAll()
+        collectionsView.dataSource = self
+        collectionsView.delegate = self
+        
+        
+        collectionsView.allowsMultipleSelection = true
+        let layout = self.collectionsView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.sectionInset = UIEdgeInsets(top: 0,left: 5,bottom: 0,right: 5)
+        
+        layout.minimumInteritemSpacing = 5
+        
+        layout.itemSize = CGSize(width: (self.collectionsView.frame.width - 20)/2, height: (self.collectionsView.frame.size.height/3))
+        
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return locationName.count
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) ->Int{
+        return Burgers.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)as! CollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
-        cell.locationName.text = locationName[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         
-        cell.locationImage.image = locationImage[indexPath.row]
+        cell.hamburgerLabel.text = Burgers[indexPath.item]
         
-        cell.locationDescription.text = locationDescription[indexPath.row]
+        cell.hamburgerImage.image = burgerImages[indexPath.item]
         
-        //This creates the shadows and modifies the cards a little bit
-        cell.contentView.layer.cornerRadius = 4.0
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        cell.contentView.layer.masksToBounds = false
-        cell.layer.shadowColor = UIColor.gray.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        cell.layer.shadowRadius = 4.0
-        cell.layer.shadowOpacity = 1.0
-        cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
-        
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 0.5
         
         return cell
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //print("ah: ",locationName[indexPath.row])
-        let Selection = locationName[indexPath.row]
+        let cell = collectionView.cellForItem(at: indexPath)
         
-        let lat = 54.2785726
-        let long = -8.4573234
+        cell?.layer.borderColor = UIColor.gray.cgColor
+        cell?.layer.borderWidth = 2
         
-        convertLatLongToAddress(latitude: lat, longitude: long, selection: Selection)
+        print(Burgers[indexPath.item])
         
-        run(after:2){
-            self.performSegue(withIdentifier: "GoMap", sender: self)
+        locations.append(Burgers[indexPath.item])
+        
+        counter+=1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderColor = UIColor.lightGray.cgColor
+        cell?.layer.borderWidth = 0.5
+        
+        counter-=1
+        locations.removeAll { $0 == Burgers[indexPath.item] }
+    }
+    
+    @IBAction func CreateRoute(_ sender: Any) {
+        if(counter > 2 || counter <= 0 ){
+            
+            let alert = UIAlertController(title: "Hey!", message: "You can only select two categories", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        else{
+            print()
+            for x in locations{
+                print("This is it: "+x)
+            }
+            
+            let Selection = locations[0]
+            
+            let lat = 54.2785726
+            let long = -8.4573234
+            
+            convertLatLongToAddress(latitude: lat, longitude: long, selection: Selection)
+            
+            run(after:2){
+                self.performSegue(withIdentifier: "GoMap", sender: self)
+            }
         }
     }
     
@@ -145,7 +186,7 @@ class CategoriesViewController: UIViewController, UICollectionViewDataSource, UI
         default:
             print("Problem")
         }
-
+        
         
         
         
@@ -260,11 +301,19 @@ class CategoriesViewController: UIViewController, UICollectionViewDataSource, UI
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! MapsViewController
         
-       
+        
         
         vc.longCoord1 = self.longCoord
         vc.latCoord1 = self.latCoord
         vc.names1 = self.names
     }
     
+
+    
+    override func viewDidLayoutSubviews(){
+        
+        RouteButton.layer.masksToBounds = true
+        RouteButton.layer.cornerRadius = RouteButton.frame.width/2
+    }
 }
+

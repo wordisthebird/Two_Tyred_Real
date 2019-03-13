@@ -10,10 +10,10 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var locationImage: UIImageView!
+    @IBOutlet weak var hamburgerImage: UIImageView!
     
     
-    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var hamburgerLabel: UILabel!
     
-    @IBOutlet weak var locationDescription: UILabel!
+    
 }

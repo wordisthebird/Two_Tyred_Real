@@ -78,8 +78,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
         //explanation
         //https://stackoverflow.com/questions/23866097/ios-geofence-clcircularregion-monitoring-locationmanagerdidexitregion-does-not
         
-        let geofenceRegionCenter = CLLocationCoordinate2DMake(54.2725555, -8.4716481);
-        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 15, identifier: "PlayaGrande");
+        let geofenceRegionCenter = CLLocationCoordinate2DMake(54.2704304, -8.4736048);
+        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 15, identifier: "Lady Erin");
         geofenceRegion.notifyOnExit = true;
         geofenceRegion.notifyOnEntry = true;
         self.locationManager.startMonitoring(for: geofenceRegion)
