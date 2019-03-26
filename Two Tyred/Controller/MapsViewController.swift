@@ -29,6 +29,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
     var TestButton : UIButton!
     var TestButton2 : UIButton!
     
+    var number: Int = 0
     
     @IBOutlet weak var MusicButton: UIButton!
     
@@ -43,6 +44,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         MapView = NavigationMapView(frame: view.bounds)
         MapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -54,6 +57,27 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
         MapView.setUserTrackingMode(.follow, animated: true)
         
         view.addSubview(MapView)
+        
+        
+        
+        let bike2 = MGLPointAnnotation()
+        bike2.coordinate = CLLocationCoordinate2D(latitude: 54.277820744023046, longitude: -8.460472042352196)
+        bike2.title = "AR"
+        
+        
+        
+        // Initialize and add the point annotation.
+        let pisa = MGLPointAnnotation()
+        pisa.coordinate = CLLocationCoordinate2D(latitude: 43.72305, longitude: 10.396633)
+        pisa.title = "Leaning Tower of Pisa"
+        MapView.addAnnotation(pisa)
+        
+        
+        
+        MapView.addAnnotation(bike2)
+        
+        MGLMapPointMake(54.277820744023046, -8.460472042352196, 5)
+        
         
         view.bringSubviewToFront(MusicButton)
         
@@ -86,6 +110,7 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
         
         addButton()
     }
+    
     
     func addButton(){
         TestButton = UIButton(frame: CGRect(x: (view.frame.width/2)-120, y: view.frame.height - 75, width:100, height: 50))
@@ -210,6 +235,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
     
     func Draw(route:Route){
         
+        number = 1
+        
         guard route.coordinateCount > 0 else{return}
         
         var routeCoordinates = route.coordinates!
@@ -232,17 +259,35 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
         }
     }
     
-    
     func mapView(_ mapView: MGLMapView,  annotationCanShowCallout annotation: MGLAnnotation)->Bool{
         return true
     }
     
     func mapView(_ mapView: MGLMapView, tapOnCalloutFor annotation: MGLAnnotation) {
-        let navigationVC = NavigationViewController(for: directionsRoute!)
-        present(navigationVC, animated: true, completion: nil)
+        
+        if (number == 0 )
+        {
+            let alert = UIAlertController(title: "Slight Problem", message: "Plesse confirm ride by pressing 'Go' button.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+            
+        }
+        else{
+            let navigationVC = NavigationViewController(for: directionsRoute!)
+            present(navigationVC, animated: true, completion: nil)
+        }
     }
     
     
+    
+    func mapView(_ mapView: MGLMapView, didSelect annotation: MGLAnnotation) {
+        
+        if (annotation.title == "AR"){
+            print("AR")
+            self.performSegue(withIdentifier: "goToAR_Real", sender: self)
+        }
+        
+    }
     
     @IBAction func AppleMusicClicked(_ sender: Any) {
         
@@ -290,6 +335,4 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
         
         self.present(alert, animated: true)
     }
-    
-    
 }

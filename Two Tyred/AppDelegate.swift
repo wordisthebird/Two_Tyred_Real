@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         FirebaseApp.configure()
        GMSServices.provideAPIKey("AIzaSyCnXV8u8wyWpDsuj9WGDLgD6qWpCwGaFqI")
         
-        
         let myDatabase = Database.database().reference()
         
         myDatabase.setValue("We've got Data yooooo")

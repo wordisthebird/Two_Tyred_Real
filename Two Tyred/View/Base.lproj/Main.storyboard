@@ -514,7 +514,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="YRh-yq-B8x" customClass="CollectionViewCell" customModule="Mulitple_Selection_Test" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="YRh-yq-B8x" customClass="CollectionViewCell" customModule="Two_Tyred" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="10" width="162" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -597,7 +597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AE9-fV-cMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5742" y="881"/>
+            <point key="canvasLocation" x="8638" y="1014"/>
         </scene>
         <!--Music View Controller-->
         <scene sceneID="thQ-b9-sQN">
@@ -763,6 +763,7 @@
                         <outlet property="MusicButton" destination="PCm-cL-gcS" id="kPz-oh-hWy"/>
                         <segue destination="OoY-0f-Igb" kind="show" identifier="goToEnd" id="905-V4-nKj"/>
                         <segue destination="OdX-rq-usZ" kind="show" identifier="GoToMusic" id="py3-nO-wx4"/>
+                        <segue destination="A84-ia-b50" kind="show" identifier="goToAR_Real" id="YEj-wK-7Ud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgO-4E-Ya3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -776,7 +777,7 @@
         <image name="square.png" width="2000" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YZi-yI-hgt"/>
+        <segue reference="py3-nO-wx4"/>
         <segue reference="iXm-L7-tfr"/>
         <segue reference="VaI-7p-7wG"/>
     </inferredMetricsTieBreakers>
