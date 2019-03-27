@@ -30,6 +30,8 @@
 		70DF52B82194D67F001B4848 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF52B72194D67E001B4848 /* square.png */; };
 		70DF52BA2194D68E001B4848 /* Apple-Music-Black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */; };
 		70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E52CAD222484B30061BB25 /* MapsViewController.swift */; };
+		70E9FE22224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9FE21224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift */; };
+		70E9FE24224AF66A00292E96 /* DetailScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E9FE23224AF66A00292E96 /* DetailScene.sks */; };
 		70EFCFC92194DAB200EB3F95 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */; };
 		70F977BA21923F7F00C1AA03 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F977B921923F7F00C1AA03 /* RegisterViewController.swift */; };
 		70F977BE2192659A00C1AA03 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F977BD2192659A00C1AA03 /* MainPageViewController.swift */; };
@@ -64,6 +66,8 @@
 		70DF52B72194D67E001B4848 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Apple-Music-Black.jpg"; sourceTree = "<group>"; };
 		70E52CAD222484B30061BB25 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		70E9FE21224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		70E9FE23224AF66A00292E96 /* DetailScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DetailScene.sks; sourceTree = "<group>"; };
 		70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		70F977B921923F7F00C1AA03 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		70F977BD2192659A00C1AA03 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -152,12 +156,13 @@
 				70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */,
 				70DF52B12194C5B3001B4848 /* WhereToViewController.swift */,
 				70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */,
-				7040C61E219769A100394B35 /* ARViewController.swift */,
 				7009E6C2220A0DA100C442AC /* SearchViewController.swift */,
 				70036AB72214A668009C8F94 /* CategoriesViewController.swift */,
 				70E52CAD222484B30061BB25 /* MapsViewController.swift */,
 				7008C102222C4CE200BD8A3D /* SearchMapViewController.swift */,
 				70756B9C22396007008D20A6 /* RideFinishedViewController.swift */,
+				7040C61E219769A100394B35 /* ARViewController.swift */,
+				70E9FE21224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift */,
 				70D31C542192265500E0DC69 /* images */,
 			);
 			path = Controller;
@@ -166,6 +171,7 @@
 		70D31C542192265500E0DC69 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				70E9FE23224AF66A00292E96 /* DetailScene.sks */,
 				708691D42201F914007AF114 /* resized_bike.png */,
 				70123856219A2ECE000F304F /* bike.png */,
 				70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */,
@@ -260,6 +266,7 @@
 				701F3651219A42CB002C676E /* AppIcon.appiconset in Resources */,
 				708691D52201F914007AF114 /* resized_bike.png in Resources */,
 				70D31C45219221E200E0DC69 /* Main.storyboard in Resources */,
+				70E9FE24224AF66A00292E96 /* DetailScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +394,7 @@
 				70D31C5A219234AF00E0DC69 /* LoginViewController.swift in Sources */,
 				70D31C42219221E200E0DC69 /* ViewController.swift in Sources */,
 				70756B9D22396007008D20A6 /* RideFinishedViewController.swift in Sources */,
+				70E9FE22224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				70036ABA2214ACBC009C8F94 /* CollectionViewCell.swift in Sources */,
 				70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */,
 				70EFCFC92194DAB200EB3F95 /* MusicViewController.swift in Sources */,

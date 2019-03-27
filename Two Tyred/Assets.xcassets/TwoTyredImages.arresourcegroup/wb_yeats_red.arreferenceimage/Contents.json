@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "TwoTyred.png"
+      "filename" : "wb_yeats_red.png"
     }
   ],
   "info" : {
@@ -10,7 +10,6 @@
     "author" : "xcode"
   },
   "properties" : {
-    "width" : 18,
-    "unit" : "centimeters"
+    "width" : 5.000030425055928
   }
 }

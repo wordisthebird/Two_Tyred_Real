@@ -12,9 +12,24 @@ import ARKit
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
     
+    var anchors = [ARImageAnchor]()
+    var countOfDetectedImages = 0
+    let updateQueue = DispatchQueue(label: "\(Bundle.main.bundleIdentifier!).serialSCNQueue")
+    
+    
     @IBOutlet weak var ARView: ARSCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set the view's delegate
+        ARView.delegate = self
+        
+        // Show statistics such as FPS and timing information (useful during development)
+        ARView.showsStatistics = true
+        
+        // Enable environment-based lighting
+        ARView.autoenablesDefaultLighting = true
+        ARView.automaticallyUpdatesLighting = true
         // Set the view's delegate
         ARView.delegate = self
         
@@ -29,7 +44,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         if let trackedImages = ARReferenceImage.referenceImages(inGroupNamed: "TwoTyredImages", bundle: Bundle.main){
             configuration.trackingImages = trackedImages
             
-            configuration.maximumNumberOfTrackedImages = 1
+            configuration.maximumNumberOfTrackedImages = 3
         }
         
         // Run the view's session
@@ -43,7 +58,7 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         ARView.session.pause()
     }
     
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+    /*func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         
         let node = SCNNode()
         
@@ -75,5 +90,55 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         }
         
         return node
+    }*/
+    
+    
+    
+   /* func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
+        //1. If Out Target Image Has Been Detected Than Get The Corresponding Anchor
+        guard let currentImageAnchor = anchor as? ARImageAnchor else { return }
+        
+        //2. Store The ARImageAnchors
+        anchors.append(currentImageAnchor)
+        
+        //3. Get The Targets Name
+        let name = currentImageAnchor.referenceImage.name!
+        
+        print("Image Name = \(name)")
+        
+        //4. Increase The Count If The Reference Image Is Called Target
+        if name == "Lady_Erin"{
+            
+            countOfDetectedImages += 1
+            
+            print("\(name) Has Been Detected \(countOfDetectedImages)")
+            
+            
+            guard let refImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: Bundle.main) else {
+                fatalError("Missing expected asset catalog resources.")
+            }
+            
+            // Create a session configuration
+            let configuration = ARImageTrackingConfiguration()
+            configuration.trackingImages = refImages
+            configuration.maximumNumberOfTrackedImages = 1
+            
+            // Run the view's session
+            ARView.session.run(configuration, options: ARSession.RunOptions(arrayLiteral: [.resetTracking, .removeExistingAnchors]))
+        
+            
+        }
+        
+     
+        }*/
+    
+        
     }
-}
+    
+   
+    
+   
+    
+    
+
