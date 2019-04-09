@@ -23,6 +23,9 @@ pod 'Alamofire'
 # Pods for MapBox
 pod 'Mapbox-iOS-SDK', '~> 4.8'
 pod 'MapboxNavigation', '~> 0.29.0'
+
+pod 'Stripe/ApplePay'
+
 inhibit_all_warnings!
 
 end

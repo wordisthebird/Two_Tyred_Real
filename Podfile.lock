@@ -98,6 +98,9 @@ PODS:
   - nanopb/encode (0.3.901)
   - Polyline (4.2.0)
   - Solar (2.1.0)
+  - Stripe/ApplePay (7.0.1):
+    - Stripe/Core
+  - Stripe/Core (7.0.1)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.2.0)
   - Turf (0.3.0)
@@ -112,6 +115,7 @@ DEPENDENCIES:
   - GooglePlaces
   - Mapbox-iOS-SDK (~> 4.8)
   - MapboxNavigation (~> 0.29.0)
+  - Stripe/ApplePay
   - SVProgressHUD
   - SwiftyJSON
 
@@ -142,6 +146,7 @@ SPEC REPOS:
     - nanopb
     - Polyline
     - Solar
+    - Stripe
     - SVProgressHUD
     - SwiftyJSON
     - Turf
@@ -172,10 +177,11 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Polyline: 3d69f75bb136357e27291d439d0436c6ebda57a4
   Solar: 2dc6e7cc39186cb0c8228fa08df76fb50c7d8f24
+  Stripe: b92298b31cf156fb23a029361b57e2fcb6583d57
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Turf: c6bdf62d6a70c647874f295dd1cf4eefc0c3e9e6
 
-PODFILE CHECKSUM: cc3e92adbbd7acf00da155e5ba2d789148fef225
+PODFILE CHECKSUM: 24ec09220f66b9af7e90b9e1e698b5aac904616b
 
 COCOAPODS: 1.6.1

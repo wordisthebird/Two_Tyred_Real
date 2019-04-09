@@ -29,7 +29,11 @@ extension ARViewController {
         print("Image Name = \(name)")
         
         if name == "wb_yeats_red"{
+            
             guard let imageAnchor = anchor as? ARImageAnchor else { return }
+            
+            
+            
             
             updateQueue.async {
                 let physicalWidth = imageAnchor.referenceImage.physicalSize.width
@@ -46,8 +50,16 @@ extension ARViewController {
                 mainNode.renderingOrder = -1
                 mainNode.opacity = 1
                 
+                
+             
                 // Add the plane visualization to the scene
                 node.addChildNode(mainNode)
+                
+                
+                
+                
+                
+                
                 
                 // Perform a quick animation to visualize the plane on which the image was detected.
                 // We want to let our users know that the app is responding to the tracked image.
@@ -116,13 +128,22 @@ extension ARViewController {
         let detailPlane = SCNPlane(width: xOffset, height: xOffset * 1.4)
         detailPlane.cornerRadius = 0.25
         
+        
+        
+       
+       
+        
+        
+        
         let detailNode = SCNNode(geometry: detailPlane)
         detailNode.geometry?.firstMaterial?.diffuse.contents = SKScene(fileNamed: "DetailScene")
+        
         
         // Due to the origin of the iOS coordinate system, SCNMaterial's content appears upside down, so flip the y-axis.
         detailNode.geometry?.firstMaterial?.diffuse.contentsTransform = SCNMatrix4Translate(SCNMatrix4MakeScale(1, -1, 1), 0, 1, 0)
         detailNode.position.z -= 0.5
         detailNode.opacity = 0
+        
         
         rootNode.addChildNode(detailNode)
         detailNode.runAction(.sequence([
@@ -132,6 +153,9 @@ extension ARViewController {
             .moveBy(x: 0, y: 0, z: -0.05, duration: 0.2)
             ])
         )
+        
+        
+        
     }
     
     func displayWebView(on rootNode: SCNNode, xOffset: CGFloat) {
@@ -139,6 +163,7 @@ extension ARViewController {
         // a bug that does now allow us to use a WKWebView as a texture for our webViewNode
         // Note that UIWebViews should only be instantiated on the main thread!
         DispatchQueue.main.async {
+    
             let request = URLRequest(url: URL(string: "https://www.yeatssociety.com/")!)
             let webView = UIWebView(frame: CGRect(x: 0, y: 0, width: 400, height: 672))
             webView.loadRequest(request)
@@ -184,6 +209,9 @@ extension ARViewController {
             .removeFromParentNode()
             ])
     }
+    
+    
+    
     
 }
 

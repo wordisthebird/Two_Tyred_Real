@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9nZ-DU-3Y9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9nZ-DU-3Y9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -481,6 +481,14 @@
                                     <segue destination="xPG-Xc-4KG" kind="unwind" unwindAction="UnwindSegueHome:" id="BVJ-vP-sg2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0I-h8-UVP">
+                                <rect key="frame" x="148" y="202" width="79" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Apple_Pay_Mark_RGB_SMALL_052318"/>
+                                <connections>
+                                    <action selector="payPressed:" destination="OoY-0f-Igb" eventType="touchUpInside" id="Ldb-6K-lax"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -489,7 +497,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vD8-XE-ci9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xPG-Xc-4KG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="8670" y="-667"/>
+            <point key="canvasLocation" x="8669.6000000000004" y="-667.01649175412297"/>
         </scene>
         <!--Categories View Controller-->
         <scene sceneID="f8D-ep-Hu0">
@@ -773,6 +781,7 @@
     </scenes>
     <resources>
         <image name="Apple-Music-Black.jpg" width="750" height="400"/>
+        <image name="Apple_Pay_Mark_RGB_SMALL_052318" width="663" height="425"/>
         <image name="Fernando_noronha.jpg" width="1024" height="768"/>
         <image name="square.png" width="2000" height="2000"/>
     </resources>

@@ -15,6 +15,7 @@
 		700A3E87219760B2008D3484 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 700A3E86219760B2008D3484 /* GoogleService-Info.plist */; };
 		70123857219A2ECE000F304F /* bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 70123856219A2ECE000F304F /* bike.png */; };
 		701F3651219A42CB002C676E /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 701F3650219A42CB002C676E /* AppIcon.appiconset */; };
+		703D0303225C1678001FDAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 703D0302225C1678001FDAC3 /* Assets.xcassets */; };
 		7040C61F219769A100394B35 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7040C61E219769A100394B35 /* ARViewController.swift */; };
 		704B228E219A157A00EA7682 /* TwoTyred.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 704B228D219A157A00EA7682 /* TwoTyred.mp4 */; };
 		70756B9D22396007008D20A6 /* RideFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70756B9C22396007008D20A6 /* RideFinishedViewController.swift */; };
@@ -23,7 +24,6 @@
 		70D31C40219221E200E0DC69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D31C3F219221E200E0DC69 /* AppDelegate.swift */; };
 		70D31C42219221E200E0DC69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D31C41219221E200E0DC69 /* ViewController.swift */; };
 		70D31C45219221E200E0DC69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D31C43219221E200E0DC69 /* Main.storyboard */; };
-		70D31C47219221E300E0DC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D31C46219221E300E0DC69 /* Assets.xcassets */; };
 		70D31C4A219221E300E0DC69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D31C48219221E300E0DC69 /* LaunchScreen.storyboard */; };
 		70D31C5A219234AF00E0DC69 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D31C59219234AF00E0DC69 /* LoginViewController.swift */; };
 		70DF52B22194C5B3001B4848 /* WhereToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF52B12194C5B3001B4848 /* WhereToViewController.swift */; };
@@ -49,6 +49,8 @@
 		700A3E86219760B2008D3484 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70123856219A2ECE000F304F /* bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bike.png; sourceTree = "<group>"; };
 		701F3650219A42CB002C676E /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
+		703D0301225C15BE001FDAC3 /* Two Tyred.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Two Tyred.entitlements"; sourceTree = "<group>"; };
+		703D0302225C1678001FDAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7040C61E219769A100394B35 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		704B228D219A157A00EA7682 /* TwoTyred.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TwoTyred.mp4; sourceTree = "<group>"; };
 		70756B9C22396007008D20A6 /* RideFinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideFinishedViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +60,6 @@
 		70D31C3F219221E200E0DC69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D31C41219221E200E0DC69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70D31C44219221E200E0DC69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		70D31C46219221E300E0DC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70D31C49219221E300E0DC69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70D31C4B219221E300E0DC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70D31C59219234AF00E0DC69 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				704B228D219A157A00EA7682 /* TwoTyred.mp4 */,
+				703D0302225C1678001FDAC3 /* Assets.xcassets */,
 				70D31C3E219221E200E0DC69 /* Two Tyred */,
 				70D31C3D219221E200E0DC69 /* Products */,
 				04400E8BE64C52C77D504B15 /* Pods */,
@@ -117,12 +119,12 @@
 		70D31C3E219221E200E0DC69 /* Two Tyred */ = {
 			isa = PBXGroup;
 			children = (
+				703D0301225C15BE001FDAC3 /* Two Tyred.entitlements */,
 				70D31C532192233700E0DC69 /* Controller */,
 				70D31C522192232500E0DC69 /* View */,
 				70D31C512192231800E0DC69 /* Model */,
 				70D31C3F219221E200E0DC69 /* AppDelegate.swift */,
 				70D31C41219221E200E0DC69 /* ViewController.swift */,
-				70D31C46219221E300E0DC69 /* Assets.xcassets */,
 				701F3650219A42CB002C676E /* AppIcon.appiconset */,
 				70D31C4B219221E300E0DC69 /* Info.plist */,
 				700A3E86219760B2008D3484 /* GoogleService-Info.plist */,
@@ -224,9 +226,16 @@
 				TargetAttributes = {
 					70D31C3B219221E200E0DC69 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 						};
 					};
@@ -260,12 +269,12 @@
 				70123857219A2ECE000F304F /* bike.png in Resources */,
 				70D31C4A219221E300E0DC69 /* LaunchScreen.storyboard in Resources */,
 				704B228E219A157A00EA7682 /* TwoTyred.mp4 in Resources */,
-				70D31C47219221E300E0DC69 /* Assets.xcassets in Resources */,
 				70DF52BA2194D68E001B4848 /* Apple-Music-Black.jpg in Resources */,
 				70DF52B82194D67F001B4848 /* square.png in Resources */,
 				701F3651219A42CB002C676E /* AppIcon.appiconset in Resources */,
 				708691D52201F914007AF114 /* resized_bike.png in Resources */,
 				70D31C45219221E200E0DC69 /* Main.storyboard in Resources */,
+				703D0303225C1678001FDAC3 /* Assets.xcassets in Resources */,
 				70E9FE24224AF66A00292E96 /* DetailScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +353,7 @@
 				"${BUILT_PRODUCTS_DIR}/Polyline/Polyline.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Solar/Solar.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Turf/Turf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -369,6 +379,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Polyline.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Solar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Turf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -550,15 +561,19 @@
 			baseConfigurationReference = 1F53FB3C55B5942C743A519E /* Pods-Two Tyred.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Two Tyred/Two Tyred.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SWH8KK7463;
 				INFOPLIST_FILE = "Two Tyred/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaelchristie.Two-Tyred";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -569,15 +584,19 @@
 			baseConfigurationReference = 08C0A16AE8316D56A16668D5 /* Pods-Two Tyred.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Two Tyred/Two Tyred.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SWH8KK7463;
 				INFOPLIST_FILE = "Two Tyred/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.michaelchristie.Two-Tyred";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
