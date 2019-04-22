@@ -29,6 +29,7 @@
 		70DF52B22194C5B3001B4848 /* WhereToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF52B12194C5B3001B4848 /* WhereToViewController.swift */; };
 		70DF52B82194D67F001B4848 /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF52B72194D67E001B4848 /* square.png */; };
 		70DF52BA2194D68E001B4848 /* Apple-Music-Black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */; };
+		70E3B8F5226E6DB60093C84E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E3B8F4226E6DB60093C84E /* StartViewController.swift */; };
 		70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E52CAD222484B30061BB25 /* MapsViewController.swift */; };
 		70E9FE22224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9FE21224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift */; };
 		70E9FE24224AF66A00292E96 /* DetailScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E9FE23224AF66A00292E96 /* DetailScene.sks */; };
@@ -66,6 +67,7 @@
 		70DF52B12194C5B3001B4848 /* WhereToViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereToViewController.swift; sourceTree = "<group>"; };
 		70DF52B72194D67E001B4848 /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		70DF52B92194D68E001B4848 /* Apple-Music-Black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Apple-Music-Black.jpg"; sourceTree = "<group>"; };
+		70E3B8F4226E6DB60093C84E /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		70E52CAD222484B30061BB25 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		70E9FE21224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		70E9FE23224AF66A00292E96 /* DetailScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DetailScene.sks; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		70D31C532192233700E0DC69 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				70E3B8F4226E6DB60093C84E /* StartViewController.swift */,
 				70D31C59219234AF00E0DC69 /* LoginViewController.swift */,
 				70F977B921923F7F00C1AA03 /* RegisterViewController.swift */,
 				70F977BD2192659A00C1AA03 /* MainPageViewController.swift */,
@@ -407,6 +410,7 @@
 				70756B9D22396007008D20A6 /* RideFinishedViewController.swift in Sources */,
 				70E9FE22224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				70036ABA2214ACBC009C8F94 /* CollectionViewCell.swift in Sources */,
+				70E3B8F5226E6DB60093C84E /* StartViewController.swift in Sources */,
 				70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */,
 				70EFCFC92194DAB200EB3F95 /* MusicViewController.swift in Sources */,
 				70D31C40219221E200E0DC69 /* AppDelegate.swift in Sources */,

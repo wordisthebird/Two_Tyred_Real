@@ -31,7 +31,7 @@
         <!--Welcome-->
         <scene sceneID="vNr-w9-Ccp">
             <objects>
-                <viewController storyboardIdentifier="welcomeVC" id="Ajf-FO-yMF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeVC" id="Ajf-FO-yMF" customClass="StartViewController" customModule="Two_Tyred" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ooH-VH-ghP"/>
                         <viewControllerLayoutGuide type="bottom" id="WtY-VG-5Yf"/>
@@ -316,7 +316,8 @@
                     <navigationItem key="navigationItem" title="Maps" id="qMv-ao-mFD">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="dP4-PZ-kQg">
                             <connections>
-                                <action selector="logOut:" destination="G9G-pM-eHB" id="D3E-Tb-9Aa"/>
+                                <action selector="logout:" destination="G9G-pM-eHB" id="QVd-PF-3hG"/>
+                                <segue destination="SQg-Ah-zVJ" kind="unwind" unwindAction="unwindToGlobalWithSegue:" id="XaO-xQ-Lto"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -327,6 +328,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZb-zX-jXB" sceneMemberID="firstResponder"/>
+                <exit id="SQg-Ah-zVJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2813.5999999999999" y="124.58770614692655"/>
         </scene>
@@ -478,7 +480,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Ok"/>
                                 <connections>
-                                    <segue destination="xPG-Xc-4KG" kind="unwind" unwindAction="UnwindSegueHome:" id="BVJ-vP-sg2"/>
+                                    <segue destination="xPG-Xc-4KG" kind="unwind" unwindAction="unwindToMainWithSegue:" id="2Fv-c7-Ctf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0I-h8-UVP">

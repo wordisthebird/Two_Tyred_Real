@@ -58,23 +58,20 @@ class MainPageViewController: UIViewController, MGLMapViewDelegate{
     }
     
     
-    @IBAction func logOut(_ sender: Any) {
-        try! Auth.auth().signOut()
-        
-     /*   if let storyboard = self.storyboard {
-            let vc = storyboard.instantiateViewController(withIdentifier: "go") as! UINavigationController
-            self.present(vc, animated: false, completion: nil)
-        }*/
-    }
+   
     
     override func viewDidLayoutSubviews(){
         RideButton.layer.masksToBounds = true
         RideButton.layer.cornerRadius = RideButton.frame.width/2
     }
     
-    @IBAction func UnwindSegueHome(_ sender: UIStoryboardSegue) {
-        
-        //bring you back to landing page
+    
+    
+    @IBAction func logout(_ sender: Any) {
+    }
+    
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) {
+        // this may be blank
     }
     
 }
