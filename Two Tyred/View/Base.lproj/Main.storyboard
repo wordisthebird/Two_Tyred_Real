@@ -316,7 +316,7 @@
                     <navigationItem key="navigationItem" title="Maps" id="qMv-ao-mFD">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="dP4-PZ-kQg">
                             <connections>
-                                <action selector="LogOut:" destination="G9G-pM-eHB" id="fPV-Le-EC6"/>
+                                <action selector="logOut:" destination="G9G-pM-eHB" id="D3E-Tb-9Aa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -788,6 +788,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="py3-nO-wx4"/>
         <segue reference="iXm-L7-tfr"/>
-        <segue reference="VaI-7p-7wG"/>
+        <segue reference="N4c-qR-tWj"/>
     </inferredMetricsTieBreakers>
 </document>

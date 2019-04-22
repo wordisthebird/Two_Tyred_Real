@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import Mapbox
 
 class MainPageViewController: UIViewController, MGLMapViewDelegate{
@@ -56,6 +57,16 @@ class MainPageViewController: UIViewController, MGLMapViewDelegate{
         return true
     }
     
+    
+    @IBAction func logOut(_ sender: Any) {
+        try! Auth.auth().signOut()
+        
+     /*   if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "go") as! UINavigationController
+            self.present(vc, animated: false, completion: nil)
+        }*/
+    }
+    
     override func viewDidLayoutSubviews(){
         RideButton.layer.masksToBounds = true
         RideButton.layer.cornerRadius = RideButton.frame.width/2
@@ -65,4 +76,5 @@ class MainPageViewController: UIViewController, MGLMapViewDelegate{
         
         //bring you back to landing page
     }
+    
 }
