@@ -17,7 +17,6 @@
 		701F3651219A42CB002C676E /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 701F3650219A42CB002C676E /* AppIcon.appiconset */; };
 		703D0303225C1678001FDAC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 703D0302225C1678001FDAC3 /* Assets.xcassets */; };
 		7040C61F219769A100394B35 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7040C61E219769A100394B35 /* ARViewController.swift */; };
-		704B228E219A157A00EA7682 /* TwoTyred.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 704B228D219A157A00EA7682 /* TwoTyred.mp4 */; };
 		70756B9D22396007008D20A6 /* RideFinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70756B9C22396007008D20A6 /* RideFinishedViewController.swift */; };
 		708691D52201F914007AF114 /* resized_bike.png in Resources */ = {isa = PBXBuildFile; fileRef = 708691D42201F914007AF114 /* resized_bike.png */; };
 		70A2E9D7219383DF00D64169 /* qrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */; };
@@ -33,6 +32,7 @@
 		70E52CAE222484B30061BB25 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E52CAD222484B30061BB25 /* MapsViewController.swift */; };
 		70E9FE22224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E9FE21224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift */; };
 		70E9FE24224AF66A00292E96 /* DetailScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E9FE23224AF66A00292E96 /* DetailScene.sks */; };
+		70EFA68B22771F8200733D6A /* AR2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFA68A22771F8200733D6A /* AR2ViewController.swift */; };
 		70EFCFC92194DAB200EB3F95 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */; };
 		70F977BA21923F7F00C1AA03 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F977B921923F7F00C1AA03 /* RegisterViewController.swift */; };
 		70F977BE2192659A00C1AA03 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F977BD2192659A00C1AA03 /* MainPageViewController.swift */; };
@@ -53,7 +53,6 @@
 		703D0301225C15BE001FDAC3 /* Two Tyred.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Two Tyred.entitlements"; sourceTree = "<group>"; };
 		703D0302225C1678001FDAC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7040C61E219769A100394B35 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		704B228D219A157A00EA7682 /* TwoTyred.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TwoTyred.mp4; sourceTree = "<group>"; };
 		70756B9C22396007008D20A6 /* RideFinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideFinishedViewController.swift; sourceTree = "<group>"; };
 		708691D42201F914007AF114 /* resized_bike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resized_bike.png; sourceTree = "<group>"; };
 		70A2E9D6219383DF00D64169 /* qrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qrCodeViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		70E52CAD222484B30061BB25 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		70E9FE21224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		70E9FE23224AF66A00292E96 /* DetailScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DetailScene.sks; sourceTree = "<group>"; };
+		70EFA68A22771F8200733D6A /* AR2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AR2ViewController.swift; sourceTree = "<group>"; };
 		70EFCFC82194DAB200EB3F95 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		70F977B921923F7F00C1AA03 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		70F977BD2192659A00C1AA03 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +101,6 @@
 		70D31C33219221E200E0DC69 = {
 			isa = PBXGroup;
 			children = (
-				704B228D219A157A00EA7682 /* TwoTyred.mp4 */,
 				703D0302225C1678001FDAC3 /* Assets.xcassets */,
 				70D31C3E219221E200E0DC69 /* Two Tyred */,
 				70D31C3D219221E200E0DC69 /* Products */,
@@ -167,6 +166,7 @@
 				7008C102222C4CE200BD8A3D /* SearchMapViewController.swift */,
 				70756B9C22396007008D20A6 /* RideFinishedViewController.swift */,
 				7040C61E219769A100394B35 /* ARViewController.swift */,
+				70EFA68A22771F8200733D6A /* AR2ViewController.swift */,
 				70E9FE21224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift */,
 				70D31C542192265500E0DC69 /* images */,
 			);
@@ -271,7 +271,6 @@
 				700A3E87219760B2008D3484 /* GoogleService-Info.plist in Resources */,
 				70123857219A2ECE000F304F /* bike.png in Resources */,
 				70D31C4A219221E300E0DC69 /* LaunchScreen.storyboard in Resources */,
-				704B228E219A157A00EA7682 /* TwoTyred.mp4 in Resources */,
 				70DF52BA2194D68E001B4848 /* Apple-Music-Black.jpg in Resources */,
 				70DF52B82194D67F001B4848 /* square.png in Resources */,
 				701F3651219A42CB002C676E /* AppIcon.appiconset in Resources */,
@@ -406,6 +405,7 @@
 				70DF52B22194C5B3001B4848 /* WhereToViewController.swift in Sources */,
 				70F977BE2192659A00C1AA03 /* MainPageViewController.swift in Sources */,
 				70D31C5A219234AF00E0DC69 /* LoginViewController.swift in Sources */,
+				70EFA68B22771F8200733D6A /* AR2ViewController.swift in Sources */,
 				70D31C42219221E200E0DC69 /* ViewController.swift in Sources */,
 				70756B9D22396007008D20A6 /* RideFinishedViewController.swift in Sources */,
 				70E9FE22224AF5DE00292E96 /* ViewController+ARSCNViewDelegate.swift in Sources */,

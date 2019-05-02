@@ -62,7 +62,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
         
         let bike2 = MGLPointAnnotation()
         bike2.coordinate = CLLocationCoordinate2D(latitude: 54.277820744023046, longitude: -8.460472042352196)
-        bike2.title = "AR"
+        bike2.title = "AR1"
+        
         
         
         
@@ -107,6 +108,12 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
         geofenceRegion.notifyOnExit = true;
         geofenceRegion.notifyOnEntry = true;
         self.locationManager.startMonitoring(for: geofenceRegion)
+        
+        let geofenceRegionCenter2 = CLLocationCoordinate2DMake(54.2637729424706, -8.466670830384828);
+        let geofenceRegion2 = CLCircularRegion(center: geofenceRegionCenter2, radius: 15, identifier: "Horses");
+        geofenceRegion2.notifyOnExit = true;
+        geofenceRegion2.notifyOnEntry = true;
+        self.locationManager.startMonitoring(for: geofenceRegion2)
         
         addButton()
     }
@@ -207,6 +214,8 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
     
     func calculateRoute(from originCorr: CLLocationCoordinate2D, to first: CLLocationCoordinate2D, to second: CLLocationCoordinate2D, to third: CLLocationCoordinate2D, to fourth: CLLocationCoordinate2D, completion: (Route?, Error?) -> Void) {
         
+        
+        
         let One1 = Waypoint(coordinate: originCorr, coordinateAccuracy: -1, name: "Current Location")
         let Two2 = Waypoint(coordinate: first, coordinateAccuracy: -1, name: "Middle")
         let Three3 = Waypoint(coordinate: second, coordinateAccuracy: -1, name: "Destination")
@@ -282,9 +291,13 @@ class MapsViewController: UIViewController, MGLMapViewDelegate, CLLocationManage
     
     func mapView(_ mapView: MGLMapView, didSelect annotation: MGLAnnotation) {
         
-        if (annotation.title == "AR"){
+        if (annotation.title == "AR1"){
             print("AR")
             self.performSegue(withIdentifier: "goToAR_Real", sender: self)
+        }
+        else if (annotation.title == "AR2"){
+            print("AR")
+            self.performSegue(withIdentifier: "goToAR_Real2", sender: self)
         }
         
     }

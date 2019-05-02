@@ -141,10 +141,6 @@ class CategoriesViewController: UIViewController, UICollectionViewDataSource, UI
             var placeMark: CLPlacemark!
             placeMark = placemarks?[0]
             
-            // Street address
-            // if let street = placeMark.thoroughfare {
-            //  print("Street: ",street)
-            // }
             
             // City
             if let city = placeMark.locality {
@@ -188,25 +184,7 @@ class CategoriesViewController: UIViewController, UICollectionViewDataSource, UI
         }
         
         
-        
-        
-        //the general site seeing based off of location
-        //let WEATHER_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=things+to+do+in+\(searchQuery)&language=en&key=AIzaSyDlMpFeJnAIjRNkIHwmE0y64Y2OldEgZvo"
-        
-        
-        //keywords area based off of location
-        //save for restaurants and pubs
-        // let WEATHER_URL2 = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=historical+buildings+in\(searchQuery)&language=en&key=AIzaSyDlMpFeJnAIjRNkIHwmE0y64Y2OldEgZvo"
-        
-        //restauraunts + bars short
-        // let WEATHER_URL2 = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=54.2785412,-8.4574523&radius=1500&keyword=restaurants+pubs&key=AIzaSyDlMpFeJnAIjRNkIHwmE0y64Y2OldEgZvo"
-        
-        
-        //restauraunts + bars short
-        //let WEATHER_URL2 = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=54.2785412,-8.4574523&radius=5000&keyword=pubs&key=AIzaSyDlMpFeJnAIjRNkIHwmE0y64Y2OldEgZvo"
-        
-        
-        
+       
         Alamofire.request(WEATHER_URL2).responseJSON {
             
             response in

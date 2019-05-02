@@ -17,6 +17,7 @@ class MusicViewController: UIViewController, MPMediaPickerControllerDelegate {
     @IBOutlet weak var albumArt: UIImageView!
     @IBOutlet weak var artistName: UILabel!
     
+    @IBOutlet weak var buttonChange: UIImageView!
     
     @IBOutlet weak var playPause: UIButton!
     
@@ -56,6 +57,7 @@ class MusicViewController: UIViewController, MPMediaPickerControllerDelegate {
                 if let AlbumTitle = item.artist{
                     artistName.text = AlbumTitle
                     playPause.setTitle("Pause", for: .normal)
+                    
                 }
             }
         }
@@ -72,14 +74,16 @@ class MusicViewController: UIViewController, MPMediaPickerControllerDelegate {
     
     
     @IBAction func playPause(_ sender: Any) {
-        print("HEHE")
+
         if mediaPlayer.playbackState == .playing{
             mediaPlayer.pause()
             playPause.setTitle("Play", for: .normal)
+            buttonChange.image = UIImage(named: "play")
         }
         else{
             mediaPlayer.play()
             playPause.setTitle("Pause", for: .normal)
+            buttonChange.image = UIImage(named: "pause")
             
         }
     }

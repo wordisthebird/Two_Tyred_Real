@@ -12,12 +12,20 @@ class WhereToViewController: UIViewController {
     
     @IBOutlet weak var EnteredTextField: UITextField!
     
+    @IBOutlet weak var JustGo: UILabel!
     var routeType: String=""
     
     
     var placeName = ""
     
     override func viewDidLoad() {
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "background")?.draw(in: self.view.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        
         super.viewDidLoad()
     }
     
@@ -58,5 +66,10 @@ class WhereToViewController: UIViewController {
         performSegue(withIdentifier: "goToCategories", sender: self)
     }
     
+    
+    
+    @IBAction func JustGo(_ sender: Any) {
+        performSegue(withIdentifier: "justGo", sender: self)
+    }
     
 }

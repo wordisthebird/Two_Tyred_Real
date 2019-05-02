@@ -1,28 +1,27 @@
 //
-//  ARViewController.swift
+//  AR2ViewController.swift
 //  Two Tyred
 //
-//  Created by Michael Christie on 10/11/2018.
-//  Copyright © 2018 Michael Christie. All rights reserved.
+//  Created by Michael Christie on 29/04/2019.
+//  Copyright © 2019 Michael Christie. All rights reserved.
 //
 
 import UIKit
 import SceneKit
 import ARKit
 
-class ARViewController: UIViewController, ARSCNViewDelegate {
-   
+class AR2ViewController: UIViewController, ARSCNViewDelegate {
     
     var anchors = [ARImageAnchor]()
     var countOfDetectedImages = 0
     let updateQueue = DispatchQueue(label: "\(Bundle.main.bundleIdentifier!).serialSCNQueue")
     
-    
+
     @IBOutlet weak var ARView: ARSCNView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         ARView.showsStatistics = false
         // Set the view's delegate
         ARView.delegate = self
         
@@ -38,7 +37,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-         ARView.showsStatistics = false
         super.viewWillAppear(animated)
         
         // Create a session configuration
@@ -46,7 +44,6 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         
         if let trackedImages = ARReferenceImage.referenceImages(inGroupNamed: "TwoTyredImages", bundle: Bundle.main){
             configuration.trackingImages = trackedImages
-            
             configuration.maximumNumberOfTrackedImages = 2
         }
         
@@ -61,10 +58,4 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         ARView.session.pause()
     }
 }
-    
-   
-    
-   
-    
-    
 
